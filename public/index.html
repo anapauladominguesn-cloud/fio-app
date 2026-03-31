@@ -12,8 +12,6 @@
       --r:2px;--rl:4px;
     }
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--white);color:var(--black);min-height:100vh;}
-
-    /* NAV */
     .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;border-bottom:1px solid var(--g100);background:var(--white);position:sticky;top:0;z-index:50;}
     .logo{font-family:'Georgia',serif;font-size:22px;font-style:italic;letter-spacing:-0.5px;color:var(--black);cursor:pointer;}
     .logo span{display:inline-block;width:8px;height:8px;background:var(--accent);border-radius:50%;margin-left:2px;vertical-align:middle;position:relative;top:-2px;}
@@ -24,12 +22,8 @@
     .nav-avatar{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--g100);overflow:hidden;cursor:pointer;display:flex;align-items:center;justify-content:center;background:var(--off);}
     .nav-avatar img{width:100%;height:100%;object-fit:cover;display:none;}
     .nav-avatar svg{width:16px;height:16px;opacity:0.3;}
-
-    /* SCREENS */
     .screen{display:none;}
     .screen.visible{display:block;}
-
-    /* ONBOARDING */
     .ob-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 61px);}
     .ob-left{padding:60px 48px;border-right:1px solid var(--g100);display:flex;flex-direction:column;justify-content:center;}
     .ob-right{background:var(--off);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 40px;gap:20px;}
@@ -41,7 +35,6 @@
     .ob-h1{font-family:'Georgia',serif;font-size:36px;font-weight:400;line-height:1.1;letter-spacing:-0.5px;margin-bottom:14px;}
     .ob-h1 em{font-style:italic;color:var(--g600);}
     .ob-sub{font-size:13px;line-height:1.7;color:var(--g600);margin-bottom:32px;max-width:360px;}
-
     .upload-zone{border:1px dashed var(--g300);border-radius:var(--rl);padding:28px 20px;text-align:center;cursor:pointer;transition:border-color .15s,background .15s;position:relative;margin-bottom:12px;}
     .upload-zone:hover{border-color:var(--black);background:var(--off);}
     .upload-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
@@ -49,43 +42,33 @@
     .upload-zone .uz-icon svg{width:16px;height:16px;color:var(--g400);}
     .upload-zone .uz-text{font-size:13px;color:var(--g600);}
     .upload-zone .uz-hint{font-size:11px;color:var(--g400);margin-top:3px;}
-
     .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
     .field{display:flex;flex-direction:column;gap:5px;}
     .field label{font-size:11px;color:var(--g600);}
     .field input,.field select{font-family:inherit;font-size:13px;padding:9px 10px;border:1px solid var(--g100);border-radius:var(--r);outline:none;color:var(--black);background:var(--white);transition:border-color .15s;width:100%;}
     .field input:focus,.field select:focus{border-color:var(--black);}
-
     .chips-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px;}
     .chip{padding:5px 13px;border-radius:20px;border:1px solid var(--g100);font-size:12px;color:var(--g600);cursor:pointer;transition:all .15s;user-select:none;}
     .chip:hover{border-color:var(--black);color:var(--black);}
     .chip.on{background:var(--black);color:var(--white);border-color:var(--black);}
     .field-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;}
-
     .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--black);color:var(--white);font-family:inherit;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:13px 26px;border:none;border-radius:var(--r);cursor:pointer;transition:opacity .15s;width:100%;justify-content:center;}
     .btn-primary:hover{opacity:.8;}
     .btn-primary:disabled{opacity:.3;cursor:not-allowed;}
     .btn-outline{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:var(--black);font-family:inherit;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:13px 26px;border:1px solid var(--g100);border-radius:var(--r);cursor:pointer;transition:all .15s;width:100%;margin-top:10px;}
     .btn-outline:hover{border-color:var(--black);}
-
     .ob-avatar-card{background:var(--white);border:1px solid var(--g100);border-radius:var(--rl);width:180px;overflow:hidden;}
     .ob-avatar-img-area{width:100%;aspect-ratio:3/4;background:var(--g100);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
     .ob-avatar-img-area img{width:100%;height:100%;object-fit:cover;display:none;}
     .ob-avatar-badge{position:absolute;bottom:10px;left:10px;background:var(--accent);color:var(--black);font-size:10px;font-weight:500;padding:3px 9px;border-radius:20px;}
     .ob-avatar-meta{padding:12px 14px;}
-    .ob-avatar-name{font-family:'Georgia',serif;font-size:14px;margin-bottom:2px;}
-    .ob-avatar-dims{font-size:11px;color:var(--g400);}
-
     .spinner{width:28px;height:28px;border:1.5px solid var(--g100);border-top-color:var(--black);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 12px;}
     @keyframes spin{to{transform:rotate(360deg);}}
-
-    /* TRYON */
     .tryon-wrap{display:grid;grid-template-columns:340px 1fr;min-height:calc(100vh - 61px);}
     .sidebar{border-right:1px solid var(--g100);padding:28px 24px;display:flex;flex-direction:column;gap:22px;overflow-y:auto;max-height:calc(100vh - 61px);}
     .sidebar-title{font-family:'Georgia',serif;font-size:18px;font-weight:400;}
     .sidebar-sub{font-size:12px;color:var(--g400);margin-top:3px;}
     .sec-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--g400);padding-bottom:8px;border-bottom:1px solid var(--g100);margin-bottom:2px;}
-
     .avatar-pill{display:flex;align-items:center;gap:12px;background:var(--off);border-radius:var(--rl);padding:10px 14px;border:1px solid var(--g100);}
     .avatar-pill-photo{width:40px;height:54px;border-radius:var(--r);object-fit:cover;display:none;}
     .avatar-pill-placeholder{width:40px;height:54px;border-radius:var(--r);background:var(--g100);display:flex;align-items:center;justify-content:center;}
@@ -94,56 +77,45 @@
     .avatar-pill-dims{font-size:11px;color:var(--g400);margin-top:2px;}
     .avatar-pill-edit{font-size:10px;color:var(--g400);text-decoration:underline;cursor:pointer;text-underline-offset:2px;}
     .avatar-pill-edit:hover{color:var(--black);}
-
     .garment-tabs{display:flex;border:1px solid var(--g100);border-radius:var(--r);overflow:hidden;margin-bottom:12px;}
     .gtab{flex:1;padding:8px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:var(--white);border:none;cursor:pointer;color:var(--g400);font-family:inherit;transition:all .15s;border-right:1px solid var(--g100);}
     .gtab:last-child{border-right:none;}
     .gtab.active{background:var(--black);color:var(--white);}
-
     .url-row{display:flex;gap:8px;margin-bottom:8px;}
     .url-input{flex:1;font-family:inherit;font-size:12px;padding:9px 12px;border:1px solid var(--g100);border-radius:var(--r);outline:none;color:var(--black);background:var(--white);transition:border-color .15s;}
     .url-input:focus{border-color:var(--black);}
     .url-input::placeholder{color:var(--g400);}
     .url-btn{font-family:inherit;font-size:11px;padding:9px 13px;background:var(--black);color:var(--white);border:none;border-radius:var(--r);cursor:pointer;white-space:nowrap;transition:opacity .15s;}
     .url-btn:hover{opacity:.75;}
-
     .run-btn{width:100%;padding:14px;background:var(--black);color:var(--white);font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:none;border-radius:var(--r);cursor:pointer;transition:opacity .15s;display:flex;align-items:center;justify-content:center;gap:8px;}
     .run-btn:hover{opacity:.8;}
     .run-btn:disabled{opacity:.3;cursor:not-allowed;}
-
     .result-panel{padding:36px 44px;display:flex;flex-direction:column;min-height:calc(100vh - 61px);}
     .rp-empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;}
     .rp-empty p{font-size:13px;color:var(--g400);line-height:1.6;max-width:200px;}
     .rp-loading{display:none;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:14px;text-align:center;}
     .rp-loading-label{font-size:12px;color:var(--g400);letter-spacing:.06em;}
     .rp-content{display:none;}
-
     .rp-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:28px;padding-bottom:22px;border-bottom:1px solid var(--g100);}
     .rp-title{font-family:'Georgia',serif;font-size:22px;font-weight:400;margin-bottom:3px;}
     .rp-meta{font-size:12px;color:var(--g400);}
     .size-pill{background:var(--accent);color:var(--black);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:20px;white-space:nowrap;}
-
     .rp-tryon-img{max-width:260px;border-radius:var(--rl);border:1px solid var(--g100);margin-bottom:24px;display:none;}
     .rp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
     .rp-block{background:var(--off);border-radius:var(--rl);padding:16px 18px;}
     .rp-block-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--g400);margin-bottom:7px;}
     .rp-block-text{font-size:13px;line-height:1.6;color:var(--black);}
-
     .alert-list{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:18px;}
     .alert-item{display:flex;align-items:flex-start;gap:9px;font-size:13px;line-height:1.5;}
     .alert-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:5px;}
-
     .tags-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;}
     .tag{font-size:11px;color:var(--g600);border:1px solid var(--g100);border-radius:20px;padding:4px 12px;}
-
     .rp-actions{display:flex;gap:10px;padding-top:20px;border-top:1px solid var(--g100);}
     .rp-btn{flex:1;padding:11px;font-family:inherit;font-size:11px;letter-spacing:.08em;text-transform:uppercase;border-radius:var(--r);cursor:pointer;transition:opacity .15s;display:flex;align-items:center;justify-content:center;gap:7px;}
     .rp-btn.primary{background:var(--black);color:var(--white);border:none;}
     .rp-btn.outline{background:transparent;color:var(--black);border:1px solid var(--g100);}
     .rp-btn.accent{background:var(--accent);color:var(--black);border:none;}
     .rp-btn:hover{opacity:.75;}
-
-    /* COMPARE */
     .compare-wrap{padding:32px;}
     .compare-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;}
     .compare-title{font-family:'Georgia',serif;font-size:22px;font-weight:400;}
@@ -164,8 +136,6 @@
     .compare-winner{margin-top:20px;padding:16px 20px;background:var(--off);border-radius:var(--rl);border:1px solid var(--g100);display:none;}
     .compare-winner-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--g400);margin-bottom:6px;}
     .compare-winner-text{font-size:13px;line-height:1.6;}
-
-    /* CLOSET */
     .closet-wrap{padding:32px;}
     .closet-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:26px;}
     .closet-title{font-family:'Georgia',serif;font-size:22px;font-weight:400;}
@@ -182,8 +152,6 @@
     .closet-add{border:1px dashed var(--g300);border-radius:var(--rl);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;gap:8px;padding:32px 16px;transition:all .15s;}
     .closet-add:hover{border-color:var(--black);background:var(--off);}
     .closet-add p{font-size:11px;color:var(--g400);text-align:center;line-height:1.5;}
-
-    /* MODAL */
     .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);align-items:center;justify-content:center;z-index:100;}
     .modal-bg.open{display:flex;}
     .modal{background:var(--white);border-radius:var(--rl);padding:28px;width:340px;}
@@ -202,7 +170,6 @@
     .share-ig:hover{opacity:.8;}
     .modal-close{width:100%;margin-top:10px;padding:10px;background:transparent;color:var(--g400);font-family:inherit;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;}
     .modal-close:hover{color:var(--black);}
-
     @media(max-width:768px){
       .ob-wrap,.tryon-wrap{grid-template-columns:1fr;}
       .ob-right{display:none;}
@@ -227,9 +194,7 @@
   </div>
 </nav>
 
-<!-- ONBOARDING -->
 <div class="screen visible" id="screen-ob">
-
   <div id="ob1">
     <div class="ob-wrap">
       <div class="ob-left">
@@ -246,8 +211,8 @@
             <div class="ob-avatar-badge">seu avatar</div>
           </div>
           <div class="ob-avatar-meta">
-            <div class="ob-avatar-name" style="color:var(--g300);">ainda não criado</div>
-            <div class="ob-avatar-dims">—</div>
+            <div style="font-family:'Georgia',serif;font-size:14px;color:var(--g300);">ainda não criado</div>
+            <div style="font-size:11px;color:var(--g400);">—</div>
           </div>
         </div>
         <p style="font-size:11px;color:var(--g400);text-align:center;max-width:180px;line-height:1.5;">Sua foto + suas medidas = análise real, sem distorção</p>
@@ -277,8 +242,7 @@
             <svg id="ob-avatar-placeholder" style="opacity:.15;" viewBox="0 0 60 80" width="60" height="80" fill="none"><ellipse cx="30" cy="22" rx="12" ry="14" fill="#999"/><path d="M10 42c0-10 8-18 20-18s20 8 20 18v30H10V42z" fill="#999"/></svg>
           </div>
           <div class="ob-avatar-meta">
-            <div class="ob-avatar-name" id="ob-preview-name" style="color:var(--g400);">sua foto aqui</div>
-            <div class="ob-avatar-dims">—</div>
+            <div id="ob-preview-name" style="font-family:'Georgia',serif;font-size:14px;color:var(--g400);">sua foto aqui</div>
           </div>
         </div>
       </div>
@@ -292,7 +256,6 @@
         <div class="ob-eyebrow">Passo 2 de 2 — medidas</div>
         <h1 class="ob-h1" style="font-size:28px;margin-bottom:10px;">Suas medidas<br><em>reais.</em></h1>
         <p class="ob-sub" style="margin-bottom:20px;">Quanto mais completo, mais precisa a análise.</p>
-
         <div class="field-label">Básico</div>
         <div class="field-grid" style="margin-bottom:16px;">
           <div class="field"><label>Nome</label><input id="ob-nome" type="text" placeholder="Como quer ser chamada"></div>
@@ -300,7 +263,6 @@
           <div class="field"><label>Altura (cm)</label><input id="ob-altura" type="number" placeholder="170"></div>
           <div class="field"><label>Peso (kg)</label><input id="ob-peso" type="number" placeholder="65"></div>
         </div>
-
         <div class="field-label">Medidas</div>
         <div class="field-grid" style="margin-bottom:16px;">
           <div class="field"><label>Busto / tórax (cm)</label><input id="ob-busto" type="number" placeholder="90"></div>
@@ -308,7 +270,6 @@
           <div class="field"><label>Quadril (cm)</label><input id="ob-quadril" type="number" placeholder="95"></div>
           <div class="field"><label>Ombros (cm)</label><input id="ob-ombros" type="number" placeholder="40"></div>
         </div>
-
         <div class="field-label" style="margin-bottom:8px;">Silhueta</div>
         <div class="chips-row" id="chips-silhueta" style="margin-bottom:16px;">
           <span class="chip" onclick="pickSilhueta(this)">Ampulheta</span>
@@ -317,7 +278,6 @@
           <span class="chip" onclick="pickSilhueta(this)">Retangular</span>
           <span class="chip" onclick="pickSilhueta(this)">Oval</span>
         </div>
-
         <div class="field-label" style="margin-bottom:8px;">Problemas comuns ao vestir</div>
         <div class="chips-row" style="margin-bottom:20px;">
           <span class="chip" onclick="toggleFit(this)">Aperta no busto</span>
@@ -328,7 +288,6 @@
           <span class="chip" onclick="toggleFit(this)">Calça longa</span>
           <span class="chip" onclick="toggleFit(this)">Sobe na cintura</span>
         </div>
-
         <button class="btn-primary" onclick="finishOnboarding()">Criar meu avatar →</button>
       </div>
       <div class="ob-right">
@@ -337,8 +296,8 @@
             <img id="ob-step3-img" alt="" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="ob-avatar-meta">
-            <div class="ob-avatar-name" id="ob-step3-name" style="font-family:'Georgia',serif;font-size:14px;"></div>
-            <div class="ob-avatar-dims" id="ob-step3-dims" style="font-size:11px;color:var(--g400);"></div>
+            <div id="ob-step3-name" style="font-family:'Georgia',serif;font-size:14px;"></div>
+            <div id="ob-step3-dims" style="font-size:11px;color:var(--g400);"></div>
           </div>
         </div>
       </div>
@@ -379,8 +338,8 @@
             <img id="ob-confirm-img" alt="" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="ob-avatar-meta">
-            <div class="ob-avatar-name" id="ob-confirm-name" style="font-family:'Georgia',serif;"></div>
-            <div class="ob-avatar-dims" id="ob-confirm-dims"></div>
+            <div id="ob-confirm-name" style="font-family:'Georgia',serif;font-size:14px;"></div>
+            <div id="ob-confirm-dims" style="font-size:11px;color:var(--g400);"></div>
             <div style="display:inline-block;background:var(--accent);color:var(--black);font-size:10px;font-weight:500;padding:3px 10px;border-radius:20px;margin-top:8px;">avatar ativo</div>
           </div>
         </div>
@@ -389,20 +348,14 @@
   </div>
 </div>
 
-<!-- EXPERIMENTAR -->
 <div class="screen" id="screen-tryon">
   <div class="tryon-wrap">
     <div class="sidebar">
-      <div>
-        <div class="sidebar-title">Experimentar</div>
-        <div class="sidebar-sub">Escolha a peça</div>
-      </div>
+      <div><div class="sidebar-title">Experimentar</div><div class="sidebar-sub">Escolha a peça</div></div>
       <div>
         <div class="sec-label" style="margin-bottom:10px;">Seu avatar</div>
         <div class="avatar-pill">
-          <div class="avatar-pill-placeholder" id="avatar-pill-placeholder">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          </div>
+          <div class="avatar-pill-placeholder" id="avatar-pill-placeholder"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
           <img id="avatar-pill-img" class="avatar-pill-photo" alt="">
           <div class="avatar-pill-info">
             <div class="avatar-pill-name" id="avatar-pill-name">—</div>
@@ -436,24 +389,15 @@
         <div class="sec-label" style="margin-bottom:10px;">Detalhes</div>
         <div class="field" style="margin-bottom:8px;">
           <label>Tipo de peça</label>
-          <select id="garment-type">
-            <option value="">Selecionar</option>
-            <option>Camiseta / blusa</option><option>Camisa</option><option>Vestido</option>
-            <option>Calça</option><option>Short / bermuda</option><option>Saia</option>
-            <option>Jaqueta / casaco</option><option>Roupa íntima</option>
-          </select>
+          <select id="garment-type"><option value="">Selecionar</option><option>Camiseta / blusa</option><option>Camisa</option><option>Vestido</option><option>Calça</option><option>Short / bermuda</option><option>Saia</option><option>Jaqueta / casaco</option><option>Roupa íntima</option></select>
         </div>
-        <div class="field">
-          <label>Observações (opcional)</label>
-          <input type="text" id="garment-obs" placeholder="Ex: slim fit, veste pequeno...">
-        </div>
+        <div class="field"><label>Observações (opcional)</label><input type="text" id="garment-obs" placeholder="Ex: slim fit, veste pequeno..."></div>
       </div>
       <button class="run-btn" id="tryon-run-btn" onclick="runTryOn()">
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" style="width:14px;height:14px;"><circle cx="10" cy="10" r="8"/><path d="M7 10l2 2 4-4"/></svg>
         Experimentar agora
       </button>
     </div>
-
     <div class="result-panel">
       <div class="rp-empty" id="rp-empty">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:40px;height:40px;opacity:.2;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -466,10 +410,7 @@
       </div>
       <div class="rp-content" id="rp-content">
         <div class="rp-header">
-          <div>
-            <div class="rp-title" id="rp-nome">—</div>
-            <div class="rp-meta" id="rp-tipo">—</div>
-          </div>
+          <div><div class="rp-title" id="rp-nome">—</div><div class="rp-meta" id="rp-tipo">—</div></div>
           <div class="size-pill" id="rp-size">—</div>
         </div>
         <img id="rp-tryon-img" class="rp-tryon-img" alt="Resultado try-on">
@@ -493,7 +434,6 @@
   </div>
 </div>
 
-<!-- COMPARAR -->
 <div class="screen" id="screen-compare">
   <div class="compare-wrap">
     <div class="compare-header">
@@ -503,17 +443,11 @@
     <div class="compare-grid">
       <div class="compare-slot" id="cslot-a">
         <div class="compare-slot-header"><div class="compare-slot-label">Peça A</div></div>
-        <div class="compare-slot-empty" onclick="goScreen('tryon')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:28px;height:28px;opacity:.25;"><path d="M12 5v14M5 12h14"/></svg>
-          <p>Experimente uma peça e clique em "Comparar"</p>
-        </div>
+        <div class="compare-slot-empty" onclick="goScreen('tryon')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:28px;height:28px;opacity:.25;"><path d="M12 5v14M5 12h14"/></svg><p>Experimente uma peça e clique em "Comparar"</p></div>
       </div>
       <div class="compare-slot" id="cslot-b">
         <div class="compare-slot-header"><div class="compare-slot-label">Peça B</div></div>
-        <div class="compare-slot-empty" onclick="goScreen('tryon')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:28px;height:28px;opacity:.25;"><path d="M12 5v14M5 12h14"/></svg>
-          <p>Adicione uma segunda peça para comparar</p>
-        </div>
+        <div class="compare-slot-empty" onclick="goScreen('tryon')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:28px;height:28px;opacity:.25;"><path d="M12 5v14M5 12h14"/></svg><p>Adicione uma segunda peça para comparar</p></div>
       </div>
     </div>
     <div class="compare-winner" id="compare-winner">
@@ -523,18 +457,13 @@
   </div>
 </div>
 
-<!-- ARMÁRIO -->
 <div class="screen" id="screen-closet">
   <div class="closet-wrap">
-    <div class="closet-header">
-      <div class="closet-title">Meu armário</div>
-      <div class="closet-count" id="closet-count">0 peças</div>
-    </div>
+    <div class="closet-header"><div class="closet-title">Meu armário</div><div class="closet-count" id="closet-count">0 peças</div></div>
     <div class="closet-grid" id="closet-grid"></div>
   </div>
 </div>
 
-<!-- MODAL COMPARTILHAR -->
 <div class="modal-bg" id="share-modal">
   <div class="modal">
     <div class="modal-title">Compartilhar resultado</div>
@@ -555,326 +484,221 @@
 </div>
 
 <script>
-const ANTHROPIC_KEY = ' ';
-
 let S = {
-  avatar: null,
-  obPhotoB64: null,
-  garmentPhotoB64: null,
-  garmentUrl: '',
-  lastResult: null,
-  closet: [],
-  compareA: null,
-  compareB: null,
-  silhueta: '',
-  fitProblemas: []
+  avatar:null, obPhotoB64:null, garmentPhotoB64:null, garmentUrl:'',
+  lastResult:null, closet:[], compareA:null, compareB:null,
+  silhueta:'', fitProblemas:[]
 };
 
 function showOb(n) {
-  [1,2,3,4,5].forEach(i => {
-    const el = document.getElementById('ob'+i);
-    if(el) el.style.display = i===n ? '' : 'none';
-  });
-  if(n===3 && S.obPhotoB64) {
-    document.getElementById('ob-step3-img').src = S.obPhotoB64;
-    updateStep3Preview();
-  }
+  [1,2,3,4,5].forEach(i => { const el=document.getElementById('ob'+i); if(el) el.style.display=i===n?'':'none'; });
+  if(n===3 && S.obPhotoB64) { document.getElementById('ob-step3-img').src=S.obPhotoB64; updateStep3Preview(); }
 }
 
 function handleObPhoto(e) {
-  const f = e.target.files[0]; if(!f) return;
-  const r = new FileReader();
-  r.onload = ev => {
-    S.obPhotoB64 = ev.target.result;
-    const img = document.getElementById('ob-avatar-preview-img');
-    img.src = S.obPhotoB64; img.style.display = 'block';
-    document.getElementById('ob-avatar-placeholder').style.display = 'none';
-    document.getElementById('ob-preview-name').textContent = 'foto enviada';
-    document.getElementById('ob2-next').disabled = false;
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=ev=>{
+    S.obPhotoB64=ev.target.result;
+    const img=document.getElementById('ob-avatar-preview-img');
+    img.src=S.obPhotoB64; img.style.display='block';
+    document.getElementById('ob-avatar-placeholder').style.display='none';
+    document.getElementById('ob-preview-name').textContent='foto enviada';
+    document.getElementById('ob2-next').disabled=false;
   };
   r.readAsDataURL(f);
 }
 
 function pickSilhueta(el) {
-  document.querySelectorAll('#chips-silhueta .chip').forEach(c => c.classList.remove('on'));
-  el.classList.add('on');
-  S.silhueta = el.textContent;
+  document.querySelectorAll('#chips-silhueta .chip').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on'); S.silhueta=el.textContent;
 }
 
 function toggleFit(el) {
   el.classList.toggle('on');
-  S.fitProblemas = [...document.querySelectorAll('.chips-row .chip.on')].map(c => c.textContent);
+  S.fitProblemas=[...document.querySelectorAll('.chips-row .chip.on')].map(c=>c.textContent);
 }
 
 function updateStep3Preview() {
-  const nome = document.getElementById('ob-nome').value || 'Você';
-  const h = document.getElementById('ob-altura').value;
-  const p = document.getElementById('ob-peso').value;
-  document.getElementById('ob-step3-name').textContent = nome;
-  document.getElementById('ob-step3-dims').textContent = [h?h+'cm':'', p?p+'kg':''].filter(Boolean).join(' · ') || '—';
+  const nome=document.getElementById('ob-nome').value||'Você';
+  const h=document.getElementById('ob-altura').value;
+  const p=document.getElementById('ob-peso').value;
+  document.getElementById('ob-step3-name').textContent=nome;
+  document.getElementById('ob-step3-dims').textContent=[h?h+'cm':'',p?p+'kg':''].filter(Boolean).join(' · ')||'—';
 }
+['ob-nome','ob-altura','ob-peso'].forEach(id=>{ const el=document.getElementById(id); if(el) el.addEventListener('input',updateStep3Preview); });
 
-['ob-nome','ob-altura','ob-peso'].forEach(id => {
-  const el = document.getElementById(id);
-  if(el) el.addEventListener('input', updateStep3Preview);
-});
+async function callClaude(messages, max_tokens) {
+  const res = await fetch('/api/analyze', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ messages, max_tokens: max_tokens || 1000 })
+  });
+  return res.json();
+}
 
 async function finishOnboarding() {
   showOb(4);
-  const nome = document.getElementById('ob-nome').value || 'Você';
-  const altura = document.getElementById('ob-altura').value;
-  const peso = document.getElementById('ob-peso').value;
-  const busto = document.getElementById('ob-busto').value;
-  const cintura = document.getElementById('ob-cintura').value;
-  const quadril = document.getElementById('ob-quadril').value;
-  const genero = document.getElementById('ob-genero').value;
-
-  S.avatar = { nome, altura, peso, busto, cintura, quadril, genero, silhueta: S.silhueta, fitProblemas: S.fitProblemas, photoB64: S.obPhotoB64 };
-  document.getElementById('ob-gen-img').src = S.obPhotoB64;
-
-  const steps = ['Analisando sua silhueta...', 'Mapeando suas medidas...', 'Criando representação visual...', 'Finalizando seu avatar...'];
-  let si = 0;
-  const iv = setInterval(() => { si=(si+1)%steps.length; document.getElementById('ob-gen-step').textContent = steps[si]; }, 1400);
-
+  const nome=document.getElementById('ob-nome').value||'Você';
+  const altura=document.getElementById('ob-altura').value;
+  const peso=document.getElementById('ob-peso').value;
+  const busto=document.getElementById('ob-busto').value;
+  const cintura=document.getElementById('ob-cintura').value;
+  const quadril=document.getElementById('ob-quadril').value;
+  const genero=document.getElementById('ob-genero').value;
+  S.avatar={nome,altura,peso,busto,cintura,quadril,genero,silhueta:S.silhueta,fitProblemas:S.fitProblemas,photoB64:S.obPhotoB64};
+  document.getElementById('ob-gen-img').src=S.obPhotoB64;
+  const steps=['Analisando sua silhueta...','Mapeando suas medidas...','Criando representação visual...','Finalizando seu avatar...'];
+  let si=0; const iv=setInterval(()=>{ si=(si+1)%steps.length; document.getElementById('ob-gen-step').textContent=steps[si]; },1400);
   try {
-    const b64 = S.obPhotoB64.split(',')[1];
-    const mt = S.obPhotoB64.split(';')[0].split(':')[1];
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': ANTHROPIC_KEY, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 600,
-        messages: [{ role: 'user', content: [
-          { type: 'image', source: { type: 'base64', media_type: mt, data: b64 } },
-          { type: 'text', text: `Analise a foto e medidas e responda APENAS em JSON sem markdown:\n{"silhuetaDescrita":"descrição curta e honesta da silhueta (1 frase)","proporcoes":"descrição das proporções (2 frases)","dicaPersonalizada":"uma dica de moda para este corpo (1 frase)"}\nDados: nome=${nome}, gênero=${genero}, altura=${altura}cm, peso=${peso}kg, busto=${busto}cm, cintura=${cintura}cm, quadril=${quadril}cm.` }
-        ]}]
-      })
-    });
+    const b64=S.obPhotoB64.split(',')[1]; const mt=S.obPhotoB64.split(';')[0].split(':')[1];
+    const data = await callClaude([{ role:'user', content:[
+      {type:'image',source:{type:'base64',media_type:mt,data:b64}},
+      {type:'text',text:`Analise a foto e medidas e responda APENAS em JSON sem markdown:\n{"silhuetaDescrita":"descrição curta e honesta da silhueta (1 frase)","proporcoes":"descrição das proporções (2 frases)","dicaPersonalizada":"uma dica de moda para este corpo (1 frase)"}\nDados: nome=${nome}, gênero=${genero}, altura=${altura}cm, peso=${peso}kg, busto=${busto}cm, cintura=${cintura}cm, quadril=${quadril}cm.`}
+    ]}], 600);
     clearInterval(iv);
-    const data = await res.json();
-    const text = (data.content||[]).map(b=>b.text||'').join('');
-    try { S.avatar.aiProfile = JSON.parse(text.replace(/```json|```/g,'').trim()); } catch(e) {}
-  } catch(err) { clearInterval(iv); }
-
-  document.getElementById('ob-confirm-img').src = S.obPhotoB64;
-  document.getElementById('ob-confirm-name').textContent = nome;
-  document.getElementById('ob-confirm-dims').textContent = [altura?altura+'cm':'', peso?peso+'kg':'', S.silhueta].filter(Boolean).join(' · ') || '—';
+    const text=(data.content||[]).map(b=>b.text||'').join('');
+    try { S.avatar.aiProfile=JSON.parse(text.replace(/```json|```/g,'').trim()); } catch(e){}
+  } catch(err){ clearInterval(iv); }
+  document.getElementById('ob-confirm-img').src=S.obPhotoB64;
+  document.getElementById('ob-confirm-name').textContent=nome;
+  document.getElementById('ob-confirm-dims').textContent=[altura?altura+'cm':'',peso?peso+'kg':'',S.silhueta].filter(Boolean).join(' · ')||'—';
   showOb(5);
 }
 
 function confirmAvatar() {
-  document.getElementById('main-nav').style.display = 'flex';
-  document.getElementById('screen-ob').style.display = 'none';
-  updateAvatarUI();
-  goScreen('tryon');
+  document.getElementById('main-nav').style.display='flex';
+  document.getElementById('screen-ob').style.display='none';
+  updateAvatarUI(); goScreen('tryon');
 }
 
 function updateAvatarUI() {
   if(!S.avatar) return;
-  const { nome, altura, peso, photoB64 } = S.avatar;
-  document.getElementById('avatar-pill-name').textContent = nome || 'Você';
-  document.getElementById('avatar-pill-dims').textContent = [altura?altura+'cm':'', peso?peso+'kg':''].filter(Boolean).join(' · ') || '—';
-  if(photoB64) {
-    const img = document.getElementById('avatar-pill-img');
-    img.src = photoB64; img.style.display = 'block';
-    document.getElementById('avatar-pill-placeholder').style.display = 'none';
-    const navImg = document.getElementById('nav-avatar-img');
-    navImg.src = photoB64; navImg.style.display = 'block';
+  const {nome,altura,peso,photoB64}=S.avatar;
+  document.getElementById('avatar-pill-name').textContent=nome||'Você';
+  document.getElementById('avatar-pill-dims').textContent=[altura?altura+'cm':'',peso?peso+'kg':''].filter(Boolean).join(' · ')||'—';
+  if(photoB64){
+    const img=document.getElementById('avatar-pill-img'); img.src=photoB64; img.style.display='block';
+    document.getElementById('avatar-pill-placeholder').style.display='none';
+    const navImg=document.getElementById('nav-avatar-img'); navImg.src=photoB64; navImg.style.display='block';
   }
 }
 
 function goScreen(name) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('visible'));
-  const sc = document.getElementById('screen-'+name);
-  if(sc) sc.classList.add('visible');
-  document.querySelectorAll('.nav-links li').forEach(l => l.classList.remove('active'));
-  const nl = document.getElementById('nl-'+name);
-  if(nl) nl.classList.add('active');
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('visible'));
+  const sc=document.getElementById('screen-'+name); if(sc) sc.classList.add('visible');
+  document.querySelectorAll('.nav-links li').forEach(l=>l.classList.remove('active'));
+  const nl=document.getElementById('nl-'+name); if(nl) nl.classList.add('active');
   if(name==='closet') renderCloset();
   if(name==='compare') renderCompare();
 }
 
-function switchGTab(tab, btn) {
-  document.querySelectorAll('.gtab').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('gtab-url').style.display = tab==='url' ? 'block' : 'none';
-  document.getElementById('gtab-foto').style.display = tab==='foto' ? 'block' : 'none';
+function switchGTab(tab,btn) {
+  document.querySelectorAll('.gtab').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+  document.getElementById('gtab-url').style.display=tab==='url'?'block':'none';
+  document.getElementById('gtab-foto').style.display=tab==='foto'?'block':'none';
 }
 
-function setUrl() {
-  S.garmentUrl = document.getElementById('garment-url').value.trim();
-  if(S.garmentUrl) document.getElementById('garment-url').style.borderColor = 'var(--black)';
-}
+function setUrl() { S.garmentUrl=document.getElementById('garment-url').value.trim(); if(S.garmentUrl) document.getElementById('garment-url').style.borderColor='var(--black)'; }
 
 function handleGarmentPhoto(e) {
-  const f = e.target.files[0]; if(!f) return;
-  const r = new FileReader();
-  r.onload = ev => {
-    S.garmentPhotoB64 = ev.target.result;
-    const img = document.getElementById('garment-preview');
-    img.src = ev.target.result; img.style.display = 'block';
-  };
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=ev=>{ S.garmentPhotoB64=ev.target.result; const img=document.getElementById('garment-preview'); img.src=ev.target.result; img.style.display='block'; };
   r.readAsDataURL(f);
 }
 
 function setRpState(state) {
-  document.getElementById('rp-empty').style.display = state==='empty' ? 'flex' : 'none';
-  document.getElementById('rp-loading').style.display = state==='loading' ? 'flex' : 'none';
-  document.getElementById('rp-content').style.display = state==='result' ? 'block' : 'none';
-  document.getElementById('tryon-run-btn').disabled = state==='loading';
+  document.getElementById('rp-empty').style.display=state==='empty'?'flex':'none';
+  document.getElementById('rp-loading').style.display=state==='loading'?'flex':'none';
+  document.getElementById('rp-content').style.display=state==='result'?'block':'none';
+  document.getElementById('tryon-run-btn').disabled=state==='loading';
 }
 
 async function runTryOn() {
   if(!S.avatar) return;
   setRpState('loading');
+  const tipo=document.getElementById('garment-type').value;
+  const obs=document.getElementById('garment-obs').value;
+  const {nome,altura,peso,busto,cintura,quadril,genero,silhueta,fitProblemas,photoB64}=S.avatar;
+  const steps=['Analisando a peça...','Cruzando com seu perfil...','Simulando caimento...','Finalizando...'];
+  let si=0; const iv=setInterval(()=>{ si=(si+1)%steps.length; document.getElementById('rp-loading-step').textContent=steps[si]; },1600);
 
-  const tipo = document.getElementById('garment-type').value;
-  const obs = document.getElementById('garment-obs').value;
-  const { nome, altura, peso, busto, cintura, quadril, genero, silhueta, fitProblemas, photoB64 } = S.avatar;
-
-  const steps = ['Analisando a peça...','Cruzando com seu perfil...','Simulando caimento...','Finalizando...'];
-  let si = 0;
-  const iv = setInterval(() => { si=(si+1)%steps.length; document.getElementById('rp-loading-step').textContent = steps[si]; }, 1600);
-
-  // 1. Gera imagem try-on via backend (Vertex AI)
   if(photoB64 && S.garmentPhotoB64) {
     try {
-      const tryonRes = await fetch('/api/tryon', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          personImageB64: photoB64.split(',')[1],
-          garmentImageB64: S.garmentPhotoB64.split(',')[1]
-        })
-      });
-      if(tryonRes.ok) {
-        const tryonData = await tryonRes.json();
-        if(tryonData.imageB64) {
-          const img = document.getElementById('rp-tryon-img');
-          img.src = 'data:image/png;base64,' + tryonData.imageB64;
-          img.style.display = 'block';
-        }
-      }
-    } catch(e) { console.warn('Try-on visual não disponível:', e); }
+      const tryonRes=await fetch('/api/tryon',{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ personImageB64:photoB64.split(',')[1], garmentImageB64:S.garmentPhotoB64.split(',')[1] })});
+      if(tryonRes.ok){ const td=await tryonRes.json(); if(td.imageB64){ const img=document.getElementById('rp-tryon-img'); img.src='data:image/png;base64,'+td.imageB64; img.style.display='block'; }}
+    } catch(e){ console.warn('Try-on visual não disponível'); }
   }
 
-  // 2. Análise textual via Claude
-  const content = [];
-  if(photoB64) content.push({ type:'image', source:{ type:'base64', media_type: photoB64.split(';')[0].split(':')[1], data: photoB64.split(',')[1] }});
-  if(S.garmentPhotoB64) content.push({ type:'image', source:{ type:'base64', media_type: S.garmentPhotoB64.split(';')[0].split(':')[1], data: S.garmentPhotoB64.split(',')[1] }});
-
-  const profileText = `Usuária: ${nome}, ${genero}, ${altura}cm, ${peso}kg. Busto:${busto}cm, Cintura:${cintura}cm, Quadril:${quadril}cm. Silhueta:${silhueta}. Problemas comuns:${fitProblemas.join(', ')||'nenhum'}. ${obs?'Obs:'+obs:''} ${S.garmentUrl?'URL:'+S.garmentUrl:''}`;
-  content.push({ type:'text', text:`Especialista em moda. Analise como a peça (tipo: ${tipo||'não informado'}) vai vestir e cair nesta pessoa. ${profileText}\nResponda APENAS em JSON sem markdown:\n{"nomePeca":"nome curto","tamanhoRecomendado":"ex: M recomendado","comoVaiVestir":"2-3 frases honestas","comoVaiCair":"2-3 frases sobre silhueta e comprimento","pontosAtencao":["ponto1","ponto2"],"tags":["tag1","tag2","tag3"]}` });
+  const content=[];
+  if(photoB64) content.push({type:'image',source:{type:'base64',media_type:photoB64.split(';')[0].split(':')[1],data:photoB64.split(',')[1]}});
+  if(S.garmentPhotoB64) content.push({type:'image',source:{type:'base64',media_type:S.garmentPhotoB64.split(';')[0].split(':')[1],data:S.garmentPhotoB64.split(',')[1]}});
+  const profileText=`Usuária: ${nome}, ${genero}, ${altura}cm, ${peso}kg. Busto:${busto}cm, Cintura:${cintura}cm, Quadril:${quadril}cm. Silhueta:${silhueta}. Problemas comuns:${fitProblemas.join(', ')||'nenhum'}. ${obs?'Obs:'+obs:''} ${S.garmentUrl?'URL:'+S.garmentUrl:''}`;
+  content.push({type:'text',text:`Especialista em moda. Analise como a peça (tipo: ${tipo||'não informado'}) vai vestir e cair nesta pessoa. ${profileText}\nResponda APENAS em JSON sem markdown:\n{"nomePeca":"nome curto","tamanhoRecomendado":"ex: M recomendado","comoVaiVestir":"2-3 frases honestas","comoVaiCair":"2-3 frases sobre silhueta e comprimento","pontosAtencao":["ponto1","ponto2"],"tags":["tag1","tag2","tag3"]}`});
 
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': ANTHROPIC_KEY, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
-      body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, messages: [{ role: 'user', content }] })
-    });
+    const data=await callClaude([{role:'user',content}],1000);
     clearInterval(iv);
-    const data = await res.json();
-    const text = (data.content||[]).map(b=>b.text||'').join('');
-    let parsed; try { parsed = JSON.parse(text.replace(/```json|```/g,'').trim()); } catch(e) { parsed = { nomePeca:'Análise', comoVaiVestir:text, comoVaiCair:'', pontosAtencao:[], tags:[] }; }
-    S.lastResult = { ...parsed, garmentPhotoB64: S.garmentPhotoB64 };
-    renderResult(parsed);
-  } catch(err) {
-    clearInterval(iv);
-    setRpState('empty');
-    alert('Erro: ' + err.message);
-  }
+    const text=(data.content||[]).map(b=>b.text||'').join('');
+    let parsed; try{ parsed=JSON.parse(text.replace(/```json|```/g,'').trim()); } catch(e){ parsed={nomePeca:'Análise',comoVaiVestir:text,comoVaiCair:'',pontosAtencao:[],tags:[]}; }
+    S.lastResult={...parsed,garmentPhotoB64:S.garmentPhotoB64}; renderResult(parsed);
+  } catch(err){ clearInterval(iv); setRpState('empty'); alert('Erro: '+err.message); }
 }
 
 function renderResult(d) {
   setRpState('result');
-  document.getElementById('rp-nome').textContent = d.nomePeca || 'Peça analisada';
-  document.getElementById('rp-tipo').textContent = document.getElementById('garment-type').value || '';
-  document.getElementById('rp-size').textContent = d.tamanhoRecomendado || '—';
-  document.getElementById('rp-vestir').textContent = d.comoVaiVestir || '—';
-  document.getElementById('rp-cair').textContent = d.comoVaiCair || '—';
-  const al = document.getElementById('rp-alertas'); al.innerHTML = '';
-  (d.pontosAtencao||[]).forEach(p => { const li = document.createElement('li'); li.className = 'alert-item'; li.innerHTML = `<div class="alert-dot"></div><span>${p}</span>`; al.appendChild(li); });
-  const tg = document.getElementById('rp-tags'); tg.innerHTML = '';
-  (d.tags||[]).forEach(t => { const sp = document.createElement('span'); sp.className = 'tag'; sp.textContent = t; tg.appendChild(sp); });
+  document.getElementById('rp-nome').textContent=d.nomePeca||'Peça analisada';
+  document.getElementById('rp-tipo').textContent=document.getElementById('garment-type').value||'';
+  document.getElementById('rp-size').textContent=d.tamanhoRecomendado||'—';
+  document.getElementById('rp-vestir').textContent=d.comoVaiVestir||'—';
+  document.getElementById('rp-cair').textContent=d.comoVaiCair||'—';
+  const al=document.getElementById('rp-alertas'); al.innerHTML='';
+  (d.pontosAtencao||[]).forEach(p=>{ const li=document.createElement('li'); li.className='alert-item'; li.innerHTML=`<div class="alert-dot"></div><span>${p}</span>`; al.appendChild(li); });
+  const tg=document.getElementById('rp-tags'); tg.innerHTML='';
+  (d.tags||[]).forEach(t=>{ const sp=document.createElement('span'); sp.className='tag'; sp.textContent=t; tg.appendChild(sp); });
 }
 
-function saveToCloset() {
-  if(!S.lastResult) return;
-  S.closet.push({ ...S.lastResult, id: Date.now() });
-  goScreen('closet');
-}
-
-function addToCompare() {
-  if(!S.lastResult) return;
-  if(!S.compareA) S.compareA = S.lastResult;
-  else S.compareB = S.lastResult;
-  goScreen('compare');
-}
+function saveToCloset(){ if(!S.lastResult) return; S.closet.push({...S.lastResult,id:Date.now()}); goScreen('closet'); }
+function addToCompare(){ if(!S.lastResult) return; if(!S.compareA) S.compareA=S.lastResult; else S.compareB=S.lastResult; goScreen('compare'); }
 
 function renderCloset() {
-  document.getElementById('closet-count').textContent = S.closet.length + ' peça' + (S.closet.length===1?'':'s');
-  const grid = document.getElementById('closet-grid');
-  grid.innerHTML = S.closet.map(item => `
-    <div class="closet-item">
-      <div class="closet-thumb">${item.garmentPhotoB64 ? `<img src="${item.garmentPhotoB64}">` : `<svg viewBox="0 0 60 80" width="28" height="28" fill="none" style="opacity:.15;"><rect x="20" y="8" width="20" height="18" rx="4" fill="#999"/><path d="M8 26h44l-4 46H12L8 26z" fill="#999"/></svg>`}</div>
-      <div class="closet-meta"><div class="closet-name">${item.nomePeca||'Peça'}</div><div class="closet-size"><span></span>${item.tamanhoRecomendado||'—'}</div></div>
-    </div>`).join('') +
-    `<div class="closet-add" onclick="goScreen('tryon')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:24px;height:24px;opacity:.25;"><path d="M12 5v14M5 12h14"/></svg><p>Experimentar nova peça</p></div>`;
+  document.getElementById('closet-count').textContent=S.closet.length+' peça'+(S.closet.length===1?'':'s');
+  const grid=document.getElementById('closet-grid');
+  grid.innerHTML=S.closet.map(item=>`<div class="closet-item"><div class="closet-thumb">${item.garmentPhotoB64?`<img src="${item.garmentPhotoB64}">`:`<svg viewBox="0 0 60 80" width="28" height="28" fill="none" style="opacity:.15;"><rect x="20" y="8" width="20" height="18" rx="4" fill="#999"/><path d="M8 26h44l-4 46H12L8 26z" fill="#999"/></svg>`}</div><div class="closet-meta"><div class="closet-name">${item.nomePeca||'Peça'}</div><div class="closet-size"><span></span>${item.tamanhoRecomendado||'—'}</div></div></div>`).join('')+`<div class="closet-add" onclick="goScreen('tryon')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:24px;height:24px;opacity:.25;"><path d="M12 5v14M5 12h14"/></svg><p>Experimentar nova peça</p></div>`;
 }
 
 function renderCompare() {
-  renderCompareSlot('cslot-a', S.compareA, 'A');
-  renderCompareSlot('cslot-b', S.compareB, 'B');
-  const winner = document.getElementById('compare-winner');
-  if(S.compareA && S.compareB) {
-    winner.style.display = 'block';
-    document.getElementById('compare-winner-text').textContent = `Comparando "${S.compareA.nomePeca}" vs "${S.compareB.nomePeca}": avalie os pontos de atenção de cada uma antes de decidir.`;
-  } else { winner.style.display = 'none'; }
+  renderCompareSlot('cslot-a',S.compareA,'A'); renderCompareSlot('cslot-b',S.compareB,'B');
+  const winner=document.getElementById('compare-winner');
+  if(S.compareA&&S.compareB){ winner.style.display='block'; document.getElementById('compare-winner-text').textContent=`Comparando "${S.compareA.nomePeca}" vs "${S.compareB.nomePeca}": avalie os pontos de atenção de cada uma antes de decidir.`; }
+  else winner.style.display='none';
 }
 
-function renderCompareSlot(id, data, label) {
-  const slot = document.getElementById(id);
-  const header = slot.querySelector('.compare-slot-header');
-  if(!data) {
-    header.innerHTML = `<div class="compare-slot-label">Peça ${label}</div>`;
-    let body = slot.querySelector('.compare-slot-loaded'); if(body) body.remove();
-    let empty = slot.querySelector('.compare-slot-empty');
-    if(!empty) { empty = document.createElement('div'); empty.className='compare-slot-empty'; empty.onclick=()=>goScreen('tryon'); empty.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:28px;height:28px;opacity:.25;"><path d="M12 5v14M5 12h14"/></svg><p>Adicione uma peça para comparar</p>'; slot.appendChild(empty); }
-    return;
-  }
-  header.innerHTML = `<div><div class="compare-slot-label">Peça ${label}</div><div class="compare-slot-name">${data.nomePeca||'—'}</div></div><button class="compare-clear" onclick="clearCompare('${label.toLowerCase()}')">remover</button>`;
-  let empty = slot.querySelector('.compare-slot-empty'); if(empty) empty.remove();
-  let body = slot.querySelector('.compare-slot-loaded');
-  if(!body) { body = document.createElement('div'); body.className='compare-slot-loaded'; slot.appendChild(body); }
-  body.innerHTML = `
-    ${data.garmentPhotoB64?`<img src="${data.garmentPhotoB64}" style="width:100%;max-height:160px;object-fit:cover;border-radius:var(--r);border:1px solid var(--g100);margin-bottom:12px;">`:''}
-    <div class="compare-size">${data.tamanhoRecomendado||'—'}</div>
-    <div class="compare-block"><div class="compare-block-label">Como vai vestir</div><div class="compare-block-text">${data.comoVaiVestir||'—'}</div></div>
-    <div class="compare-block"><div class="compare-block-label">Como vai cair</div><div class="compare-block-text">${data.comoVaiCair||'—'}</div></div>
-    ${(data.pontosAtencao||[]).map(p=>`<div style="display:flex;gap:7px;align-items:flex-start;font-size:12px;color:var(--g600);margin-bottom:5px;line-height:1.5;"><div style="width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:5px;"></div>${p}</div>`).join('')}`;
+function renderCompareSlot(id,data,label) {
+  const slot=document.getElementById(id); const header=slot.querySelector('.compare-slot-header');
+  if(!data){ header.innerHTML=`<div class="compare-slot-label">Peça ${label}</div>`; let body=slot.querySelector('.compare-slot-loaded'); if(body) body.remove(); let empty=slot.querySelector('.compare-slot-empty'); if(!empty){empty=document.createElement('div');empty.className='compare-slot-empty';empty.onclick=()=>goScreen('tryon');empty.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:28px;height:28px;opacity:.25;"><path d="M12 5v14M5 12h14"/></svg><p>Adicione uma peça para comparar</p>';slot.appendChild(empty);} return; }
+  header.innerHTML=`<div><div class="compare-slot-label">Peça ${label}</div><div class="compare-slot-name">${data.nomePeca||'—'}</div></div><button class="compare-clear" onclick="clearCompare('${label.toLowerCase()}')">remover</button>`;
+  let empty=slot.querySelector('.compare-slot-empty'); if(empty) empty.remove();
+  let body=slot.querySelector('.compare-slot-loaded'); if(!body){body=document.createElement('div');body.className='compare-slot-loaded';slot.appendChild(body);}
+  body.innerHTML=`${data.garmentPhotoB64?`<img src="${data.garmentPhotoB64}" style="width:100%;max-height:160px;object-fit:cover;border-radius:var(--r);border:1px solid var(--g100);margin-bottom:12px;">`:''}<div class="compare-size">${data.tamanhoRecomendado||'—'}</div><div class="compare-block"><div class="compare-block-label">Como vai vestir</div><div class="compare-block-text">${data.comoVaiVestir||'—'}</div></div><div class="compare-block"><div class="compare-block-label">Como vai cair</div><div class="compare-block-text">${data.comoVaiCair||'—'}</div></div>${(data.pontosAtencao||[]).map(p=>`<div style="display:flex;gap:7px;align-items:flex-start;font-size:12px;color:var(--g600);margin-bottom:5px;line-height:1.5;"><div style="width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:5px;"></div>${p}</div>`).join('')}`;
 }
 
-function clearCompare(slot) {
-  if(slot==='a') S.compareA = null; else S.compareB = null;
-  renderCompare();
-}
+function clearCompare(slot){ if(slot==='a') S.compareA=null; else S.compareB=null; renderCompare(); }
 
-function openShare() {
+function openShare(){
   if(!S.lastResult) return;
-  document.getElementById('sm-nome').textContent = S.lastResult.nomePeca || '—';
-  document.getElementById('sm-size').textContent = S.lastResult.tamanhoRecomendado || '—';
-  document.getElementById('sm-vestir').textContent = S.lastResult.comoVaiVestir || '—';
-  const tg = document.getElementById('sm-tags'); tg.innerHTML = '';
-  (S.lastResult.tags||[]).slice(0,3).forEach(t => { const sp=document.createElement('span'); sp.className='share-preview-tag'; sp.textContent=t; tg.appendChild(sp); });
+  document.getElementById('sm-nome').textContent=S.lastResult.nomePeca||'—';
+  document.getElementById('sm-size').textContent=S.lastResult.tamanhoRecomendado||'—';
+  document.getElementById('sm-vestir').textContent=S.lastResult.comoVaiVestir||'—';
+  const tg=document.getElementById('sm-tags'); tg.innerHTML='';
+  (S.lastResult.tags||[]).slice(0,3).forEach(t=>{const sp=document.createElement('span');sp.className='share-preview-tag';sp.textContent=t;tg.appendChild(sp);});
   document.getElementById('share-modal').classList.add('open');
 }
-
-function closeShare() { document.getElementById('share-modal').classList.remove('open'); }
-
-function copyShareText() {
+function closeShare(){ document.getElementById('share-modal').classList.remove('open'); }
+function copyShareText(){
   if(!S.lastResult) return;
-  const text = `✨ Experimentei o ${S.lastResult.nomePeca} no @fio.provador antes de comprar!\n${S.lastResult.tamanhoRecomendado} — ${S.lastResult.comoVaiVestir}\n\n${(S.lastResult.tags||[]).map(t=>'#'+t.replace(/\s+/g,'')).join(' ')}\n\n#fio #provadordigital`;
+  const text=`✨ Experimentei o ${S.lastResult.nomePeca} no @fio.provador antes de comprar!\n${S.lastResult.tamanhoRecomendado} — ${S.lastResult.comoVaiVestir}\n\n${(S.lastResult.tags||[]).map(t=>'#'+t.replace(/\s+/g,'')).join(' ')}\n\n#fio #provadordigital`;
   navigator.clipboard?.writeText(text).then(()=>alert('Copiado!')).catch(()=>alert(text));
 }
 </script>
